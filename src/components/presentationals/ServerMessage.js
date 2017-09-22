@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Radium from 'radium';
 
 class ServerMessage extends Component {
     componentDidMount() {
@@ -12,4 +13,4 @@ class ServerMessage extends Component {
         );
     }
 }
-export default ServerMessage;
+export default Radium(ServerMessage);

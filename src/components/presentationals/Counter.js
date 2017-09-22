@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Radium from 'radium';
 
 class Counter extends Component {
 
@@ -16,4 +17,4 @@ class Counter extends Component {
         );
     }
 }
-export default Counter;
+export default Radium(Counter);
