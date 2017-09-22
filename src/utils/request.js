@@ -1,6 +1,6 @@
 import axios from 'axios';
-import appConst from './appConst';
-import { browserHistory } from 'react-router';
+//import appConst from './appConst';
+//import { browserHistory } from 'react-router';
 
 export default function request({ url, method = 'get', data }) {
     let config = {
@@ -16,7 +16,7 @@ export default function request({ url, method = 'get', data }) {
     }).then(response => {
         return response;
     }).catch(err => {
-        if (error.response && error.response.data) {
+        if (err.response && err.response.data) {
             // if (error.response.data.code === appConst.responseCode.tokenExpired.detail.code) {
             //     return restore({ url, method, data });
             // } else if (error.response.data.code === appConst.responseCode.tokenInvalid.detail.code) {
@@ -24,7 +24,7 @@ export default function request({ url, method = 'get', data }) {
             //     throw error;
             // }
         }
-        console.log(error);
-        throw error;
+        console.log(err);
+        throw err;
     });
 }
